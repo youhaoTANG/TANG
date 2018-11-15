@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>第七次作业</title>
+		<script>
+			function ChangeAllColor() {
+				document.getElementById("BOX").style.color = "green";
+			}
+
+			function ChangeBGColor() {
+				document.getElementById("BOX").style.backgroundColor = "blue";
+			}
+
+			function Adda() {
+				var x = document.createElement("a");
+				var y = document.createTextNode("A元素");
+				x.appendChild(y);
+				document.body.appendChild(x);
+				x.style.color = "yellow";
+				x.style.backgroundColor = "red";
+				document.getElementById("BOX").appendChild(x);
+			}
+
+			function deletep() {
+				var element,
+					x = document.getElementsByTagName('p');
+				while(x.length > 0) {
+					element = x[0];
+					element.parentElement.removeChild(element);
+				}
+			}
+
+			function deletea() {
+				var element,
+					x = document.getElementsByTagName('a');
+				while(x.length > 0) {
+					element = x[0];
+					element.parentElement.removeChild(element);
+				}
+			}
+			function Addp(){
+				var x = document.createElement("p");
+				var y = document.createTextNode("P元素");
+				x.appendChild(y);
+				document.body.appendChild(x);
+				x.style.color = "purple";
+				document.getElementById("BOX").appendChild(x);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="BOX">
+			<p>这是第一个P元素</p>
+			<p>这是第二个P元素</P>
+		</div>
+		<br>
+		<button type="button" onclick="ChangeAllColor()">变色</button>
+		<button type="button" onclick="ChangeBGColor()">改变变背景色</button>
+		<button type="button" onclick="Addp()">增加p元素</button>
+		<button type="button" onclick="Adda()">增加红底黄字a元素</button>
+		<button type="button" onclick="deletep()">删除所有p元素</button>
+		<button type="button" onclick="deletea()">删除所有a元素</button>
+
+		</br>
+
+	</body>
+
+</html>
