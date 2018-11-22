@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				
+			}
+			th,td{
+				border: 1px solid black;
+				text-align: center;
+			}
+			table{
+				border:1px solid black;
+				border-collapse: collapse;
+			}
+			.tr1{
+				
+			}
+			.tr2{
+				
+			}
+			table tr:nth-child(2n-1)
+			table tr:nth-child(2n)
+			a:link {
+				color: black;
+				text-decoration: none;
+			}
+			
+			a:visiteid {
+				color: darkmagenta;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: red;
+				text-decoration: none;
+			}
+			
+			a:active {
+				color: white;
+				text-decoration: underline;
+			}
+		</style>
+		
+	</head>
+	<body style="text-align: center;">
+		<script type="text/javascript">
+			var count=4;
+			function createNewTr(){
+				tab=document.getElementById("tab");
+				newTr=document.createElement("tr");
+				tab.appendChild(newTr);
+				
+				td1=document.createElement("td");
+				newTr.appendChild(td1);
+				td1.innerHTML=count;
+				
+				td2=document.createElement("td");
+				newTr.appendChild(td2);
+				newSpan=document.createElement("span");
+				td2.appendChild(newSpan);
+				newSpan.innerHTML=document.myform.name.value;
+				newSpan.addEventListener("mouseover",function(){
+					this.style.color="red";
+				})
+				newSpan.addEventListener("mouseleave",function(){
+					this.style.color="black";
+				})
+				
+				td3=document.createElement("td");
+				newTr.appendChild(td3);
+				td3.innerHTML=document.myform.sex.value;
+				
+				td4=document.createElement("td");
+				newTr.appendChild(td4);
+				td4.innerHTML="<a href='javascript:void(0)' onclick='deleteRow(this)'>删除</a>";
+				
+				count=count+1;
+			}
+			function deleteRow(canshu){
+				delRow=canshu.parentNode.parentNode;
+				delRow.parentNode.removeChild(delRow);
+			}
+		</script>
+		<h1>JavaScript作业</h1>
+		<form name="myform">
+			<p>姓名<input type="text"  name="name" id="name1"/>
+		 性别:男<input type="radio" value="男" name="sex" checked="checked">女<input type="radio" value="女" name="sex"></p>
+		</form>
+		<button style="height: 20px;margin-bottom: 20px;" onclick="createNewTr()">增添</button>
+		<table cellpadding="0" width="400px" align="center" id="tab">
+			<tr style="background-color: deepskyblue;">
+				<th>编号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>操作</th>
+			</tr>
+			<tr style="background-color:  #eaf5ff;">
+				<td>1</td>
+				<td><a>111</a></td>
+				<td>女</td>
+				<td><a href="javascript:void(0);" onclick="deleteRow(this)">删除</a></td>
+			</tr>
+			<tr style="background-color: #c7e5ff;">
+				<td>2</td>
+				<td><a>222</a></td>
+				<td>女</td>
+				<td><a href="javascript:void(0);" onclick="deleteRow(this)">删除</a></td>
+			</tr>
+			<tr style="background-color:  #eaf5ff;">
+				<td>3</td>
+				<td><a>333</a></a</td>
+				<td>男</td>
+				<td><a href="javascript:void(0);" onclick="deleteRow(this)">删除</a></td>
+			</tr>
+			
+		</table>
+	</body>
+</html>
