@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				color: #666;
+				width: 960px;
+				background-image: url(img/57436254060546986.jpg);
+				background-size: cover;
+				margin: 0 auto;
+			}
+			
+			.nav {
+				width: 600px;
+				height: 50px;
+				font: bold 0/50px Arial;
+				text-align: center;
+				margin: 0px auto;
+				border-radius: 8px;
+			}
+			
+			.nav a {
+				display: inline-block;
+				-webkit-transition: all 0.2s ease-in;
+				-moz-transition: all 0.2s ease-in;
+				-o-transition: all 0.2s ease-in;
+				-ms-transition: all 0.2s ease-in;
+				transition: all 0.2s ease-in;
+			}
+			
+			.nav a:hover {
+				-webkit-transform: rotate(10deg);
+				-moz-transform: rotate(10deg);
+				-o-transform: rotate(10deg);
+				-ms-transform: rotate(10deg);
+				transform: rotate(10deg);
+			}
+			
+			.black {
+				background: #2c2c2c;
+				box-shadow: 0 7px 0 #0b0b0b;
+			}
+			
+			.nav li {
+				position: relative;
+				display: inline-block;
+				padding: 0 16px;
+				font-size: 13px;
+				text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+				list-style: none outside none;
+			}
+			
+			.nav li::before,
+			.nav li::after {
+				content: "";
+				position: absolute;
+				top: 14px;
+				height: 25px;
+				width: 1px;
+			}
+			
+			.nav li::after {
+				right: 0;
+				background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+				background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+				background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+				background: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+				background: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+			}
+			
+			.black li::before {
+				left: 0;
+				background: -moz-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+				background: -webkit-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+				background: -o-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+				background: -ms-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+				background: linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+			}
+			
+			.nav a,
+			.nav a:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+			
+			#lunbotu {
+				width: 450px;
+				height: 450px;
+				overflow: hidden;
+				position: relative;
+				margin: 0px auto;
+				position: relative;
+			}
+			
+			#banner {
+				height: 460px;
+				width: 6130px;
+				position: absolute;
+				transition: 2s;
+				left: 0px;
+			}
+			
+			#banner img {
+				float: left;
+			}
+			#biao {
+				position: absolute;
+				top: 760px;
+				left: 45%;
+			}
+			
+			#biao_1 {
+				height: 20px;
+				width: 20px;
+				border: 1px solid #000;
+				z-index: 10;
+				float: left;
+				list-style: none;
+				border-radius: 50%;
+				margin-left: 20px;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>唐友豪201805550422</h1>
+			</div>
+
+			<div data-role="main" class="ui-content" style="background-image: url(img/57436254060546986.jpg);background-size:cover ;">
+				<section class="demo">
+					<ul class="nav black">
+						<li>
+							<a href="#pagetwo" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagetwo" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagethree" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagefour" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+					</ul>
+				</section>
+				<div style="text-align: center; width: 600px; height: 700px;background-color:rgba(0,0,0,0.35); margin: 0 auto;">
+					<center>
+						<p>
+							<h1 style="color: white;">项目名称：小球藻之家</h1></p>
+					</center>
+					<center>
+						<p>
+							<h2 style="color: white;">业务介绍；我们主要是以小球藻作为生产原料来配置产品，而且小球藻由我们自主专业培养。小球藻生息在淡水中，它借助阳光、水和二氧化碳，以每隔20小时分裂出4个细胞的旺盛繁殖能力，不停地将太阳能量转化生成蕴涵多种营养成分的藻体，并在增值中释放出大量的氧气；而它的光合能力高于其他植物10倍以上。基于这种生命活力及产生的高能营养物质，人们赞美它是“罐装的太阳”。</h2></p>
+					</center>
+					<div id="lunbotu">
+						<div id="banner">
+							<img class="m" src="img/5a557af303d6b.jpg" />
+							<img class="m" src="img/veer-129636355.jpg" />
+						</div>
+						<div id="biao">
+							<ul>
+								<li id="biao_1">1</li>
+								<li id="biao_1">2</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="footer">
+				<h1>手机端作业</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>唐友豪201805550422</h1>
+			</div>
+			<div data-role="main" class="ui-content" style="background-image: url(img/57436254060546986.jpg); background-size: cover;">
+				<section class="demo">
+					<ul class="nav black">
+						<li>
+							<a href="#pageone" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagetwo" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagethree" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagefour" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+					</ul>
+				</section>
+				<div style="text-align: center; width: 600px; height: 780px;background-color:rgba(0,0,0,0.35); margin: 0 auto;">
+					<center>
+						<p>
+							<h1 style="color: white;">食品添加</h1></p>
+					</center>
+					<center>
+						<p>
+							<h2 style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;光合作用非常强，是其他植物的几十倍。其含有丰富的蛋白质、维生素、矿物质、食物纤维、核酸及叶绿素等，是维持和促进人体健康所不可缺少的营养素，特别是含有令人注目的生物活性物质糖蛋白、多糖体以及高达13%的核酸等物质。具有增强人体免疫、防止病毒增殖、抑制癌细胞增殖、抑制血糖上升，降低血清胆固醇含量，排除毒素，迅速修复机体的损伤等功能。小球藻中富含CGF（小球藻生长因子），能迅速恢复机体造成的损伤。小球藻为世界上公认的健康食品，全世界微藻产业中产量最多的品种，在日本保健品中连续十年销量第一，全世界年产量2000吨，主要生产地为东南亚地区。</h2></p>
+					</center>
+					<div id="lunbotu">
+						<div id="banner">
+							<img class="m" src="img/veer-127247762.jpg" />
+							<img class="m" src="img/veer-134519286.jpg" />
+						</div>
+						<div id="biao">
+							<ul>
+								<li id="biao_1">1</li>
+								<li id="biao_1">2</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div data-role="footer">
+				<h1>手机端作业</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="pagethree">
+			<div data-role="header">
+				<h1>唐友豪201805550422</h1>
+			</div>
+
+			<div data-role="main" class="ui-content" style="background-image: url(img/57436254060546986.jpg); background-size: cover;">
+				<section class="demo">
+					<ul class="nav black">
+						<li>
+							<a href="#pageone" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagetwo" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagethree" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagefour" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+					</ul>
+				</section>
+				<div style="text-align: center; width: 600px; height: 800px;background-color:rgba(0,0,0,0.35); margin: 0 auto;">
+					<center>
+						<p>
+							<h1 style="color: white;">化妆品添加剂</h1></p>
+					</center>
+					<center>
+						<p>
+							<h2 style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小球藻的益处很多，但其一些做成的食品不是利于消化吸收。如果仅仅想对皮肤好的话，可以使用有小球藻成分添加的化妆品。小球藻可以去除黑色素和提高抗辐射能力。在1986年的苏联切尔诺贝利核电站泄漏事故后，日本派大量专家去苏联救援时，向当地人提供了大量的从日本带过去的小球藻以及小球藻食品，用以提高受辐射侵害者的免疫力，而使以几十万计的俄国人民免遭死亡的厄运。</h2></p>
+					</center>
+					<div id="lunbotu">
+						<div id="banner">
+							<img class="m" src="img/TB2Z3M0bpXXXXaqXpXXXXXXXXXX_!!919438129.jpg " width="450px" />
+							<img class="m" src="img/15275023q0cttaffpy0azi.jpg" width="515px" />
+						</div>
+						<div id="biao">
+							<ul>
+								<li id="biao_1">1</li>
+								<li id="biao_1">2</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="footer">
+				<h1>手机端作业</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="pagefour">
+			<div data-role="header">
+				<h1>唐友豪201805550422</h1>
+			</div>
+
+			<div data-role="main" class="ui-content" style="background-image: url(img/57436254060546986.jpg); background-size: cover;">
+				<section class="demo">
+					<ul class="nav black">
+						<li>
+							<a href="#pageone" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagetwo" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagethree" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="#pagefour" data-transition="flow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+					</ul>
+				</section>
+				<div style="text-align: center; width: 600px; height: 730px;background-color:rgba(0,0,0,0.35); margin: 0 auto;">
+					<center>
+						<p>
+							<h1 style="color: white;">饲料</h1></p>
+					</center>
+					<center>
+						<p>
+							<h2 style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小球藻是很好的植食性动物饲料。因为藻类营养丰富，所以作为饲料也是非常的好，用我们专业级小球藻制成的饲料饲养养出的水产品肯定身体壮如牛，肉质更上一层楼。</h2></p>
+					</center>
+					<div id="lunbotu">
+						<div id="banner">
+							<img class="m" src="img/1495099273788_4.jpg" />
+							<img class="m" src="img/LOCAL201612120835000042071618116.png" />
+						</div>
+						<div id="biao">
+							<ul>
+								<li id="biao_1">1</li>
+								<li id="biao_1">2</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="footer">
+				<h1>手机端作业</h1>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var slid = document.getElementById("banner");
+		//var id = document.getElementById("bt");
+		var imgwidth = document.getElementsByClassName("m");
+		var oli = document.getElementById("biao").getElementsByTagName("li");
+		//console.log(oli);
+		//console.log(imgwidth );
+		var i = 0;
+		auto();
+		oli[0].style.cssText = "background:#ff6700;color:#fff;";
+
+		function auto() {
+
+			time = setInterval(function() {
+				i++;
+				if(i <= 1) {
+					slid.style.left = slid.offsetLeft - 450 + "px";
+					oli[i].style.cssText = "background:#ff6700;color:#fff;";
+					oli[i - 1].style.cssText = "background:none;color:#000;";
+				} else {
+					slid.style.left = "0px";
+					oli[1].style.cssText = "background:none;color:#000;";
+					oli[0].style.cssText = "background:#ff6700;color:#fff;";
+					i = 0;
+				}
+				console.log(i);
+			}, 3000)
+		}
+
+		for(var j = 0; j <= 1; j++) {
+			//console.log(imgwidth[j].index);
+			imgwidth[j].index = j;
+			oli[j].index = j;
+			oli[j].onmouseover = function() {
+				this.style.cssText = "background:#ff6700;color:#fff;"
+				this.onmouseout = function() {
+					this.style.cssText = "background:none;color:#000;"
+				}
+			}
+			oli[j].onclick = function() {
+				clearInterval(time);
+				m = this.index;
+				slid.style.left = -m * 1226 + "px";
+				i = m;
+				auto();
+				console.log(i);
+			}
+		}
+	</script>
+</html>
